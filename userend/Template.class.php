@@ -12,7 +12,7 @@ class MyUtils{
 
 			<!-- Bootstrap -->
 		    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+			
 
 
 		</head>
@@ -84,8 +84,9 @@ END;
 	//closure of <body> and <html> tags
 	static function html_footer($text=""){
 		$string = <<<END
-		<!-- JQuery and Boostrap-->
+		<!-- JQuery, JQueryUI, and Boostrap-->
 		<script src="assets/jquery/jquery-3.1.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<!-- end JQuery and Boostrap-->
 		</body>
