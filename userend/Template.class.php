@@ -2,16 +2,16 @@
 
 class MyUtils{
 	// contains all content from beginning of HTML to end of navbar
-	static function html_header($title="Untitled"){
+	static function html_header($title="Untitled", $location = ""){
 		$string = <<<END
 		<!DOCTYPE html>
 		<html lang="en">
 		<head>
 			<meta charset="utf-8" />
-			<title>TigerEval</title>
+			<title>TigerEval - {$title}</title>
 
 			<!-- Bootstrap -->
-		    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		    <link href="{$location}assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 			
 
 
@@ -82,12 +82,12 @@ END;
 	// contains all content after the main content.
 	//jquery, bootstrap, and other js files
 	//closure of <body> and <html> tags
-	static function html_footer($text=""){
+	static function html_footer($location=""){
 		$string = <<<END
 		<!-- JQuery, JQueryUI, and Boostrap-->
-		<script src="assets/jquery/jquery-3.1.1.min.js"></script>
+		<script src="{$location}assets/jquery/jquery-3.1.1.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="{$location}assets/bootstrap/js/bootstrap.min.js"></script>
 		<!-- end JQuery and Boostrap-->
 		</body>
 		</html>\n

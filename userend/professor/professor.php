@@ -1,9 +1,9 @@
 <?php
-	include('LIB_tigerEval.php');
+	include('../LIB_tigerEval.php');
 	my_Init();
 
 	
-	echo MyUtils::html_header();
+	echo MyUtils::html_header("professor", "../");
 	
 	//html content
 	
@@ -27,7 +27,7 @@
 		  
 		  
 	
-	echo MyUtils::html_footer();
+	echo MyUtils::html_footer("../");
 	//javascript for creating gradeResult text inputs as the numStudents input changes (on keyup)
 	echo '<script>
 			$("#numStudents").keyup(function(){
