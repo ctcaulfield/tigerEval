@@ -1,14 +1,14 @@
 <?php
 	include('../LIB_tigerEval.php');
 	my_Init();
-	echo MyUtils::html_header("professor", "../");
+	echo MyUtils::html_header("professor", "../", "submit_grades.js");
 ?>
 	
 
 <div id='container' class= 'col-lg-4 col-lg-offset-4'> 
 	<h3>Select Course Information</h3>
 
-	<form>
+	<form name="grades" onsubmit="return validateForm()" method="post">
 		<!-- select course -->
 		<div class="form-group">
 			<label for="courseSelect">Course:</label>
@@ -38,8 +38,7 @@
 		    <label for="exampleTextarea">Paste grades here:</label>
 		    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
 		</div>
-
-		<button id="submitButton" type="button" class="btn btn-primary">Submit Grades</button>	
+		<input type="submit" value="submit" class="btn btn-primary">
 	</form>
 
 
@@ -47,8 +46,6 @@
 </div>
 	
 
-		  
-		  
 <?php
 	echo MyUtils::html_footer("../");
 ?>

@@ -2,7 +2,16 @@
 
 class MyUtils{
 	// contains all content from beginning of HTML to end of navbar
-	static function html_header($title="Untitled", $location = ""){
+	//parameters
+	
+	// $title - provide a title to the html file
+	
+	// $location - the location of the child thats calling this parent
+	//	function - ex: "../" -> for call from a file one folder down
+	// from template.class.php
+	
+	// $script - name of javascript file used in this code
+	static function html_header($title="", $location = "", $script = ""){
 		$string = <<<END
 		<!DOCTYPE html>
 		<html lang="en">
@@ -12,7 +21,7 @@ class MyUtils{
 
 			<!-- Bootstrap -->
 		    <link href="{$location}assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-			
+			<script src="{$location}assets/js/{$script}"></script>
 
 
 		</head>
