@@ -12,7 +12,7 @@
 		<!-- select course -->
 		<div class="form-group">
 			<label for="courseSelect">Course:</label>
-			<select class="form-control" id="courseSelect">
+			<select class="form-control" id="courseSelect" required>
 			    <option value="" disabled="disabled" selected="selected">Select Course</option>
 			    <option value="120">ISTE 120</option>
 		    </select>
@@ -21,7 +21,7 @@
 		<!-- select section -->
 		<div class="form-group">
 			<label for="sectionSelect">Section:</label>
-		    <select class="form-control" id="sectionSelect">
+		    <select class="form-control" id="sectionSelect" required>
 			    <option value="" disabled="disabled" selected="selected">Select Section</option>
 			    <option value="1">01</option>
 		    </select>
@@ -32,11 +32,11 @@
 
 			<!-- number of students -->
 			<label for="numStudents">Number of students in course:</label> 
-			<input id="numStudents" type="text" style="width:50px;" value="5"><br/>
+			<input id="numStudents" type="text" style="width:50px;" value="5" required><br/>
 			
 			<!-- copy and paste input -->
-		    <label for="exampleTextarea">Paste grades here:</label>
-		    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+		    <label for="gradesInput">Paste grades here:</label>
+		    <textarea class="form-control" id="gradesInput" rows="3" required></textarea>
 		</div>
 		<input type="submit" value="submit" class="btn btn-primary">
 	</form>
