@@ -1,12 +1,12 @@
 <?php
 	include('../LIB_tigerEval.php');
 	my_Init();
-	echo MyUtils::html_header("professor", "../", "submit_grades.js");
+	echo MyUtils::html_header("Professor", "../", "submit_grades");
 ?>
 	
 
 <div id='container' class= 'col-lg-4 col-lg-offset-4'> 
-	<h3>Select Course Information</h3>
+	<h3>Submit Grades</h3>
 
 	<form name="grades" onsubmit="return validateForm()" method="post">
 		<!-- select course -->
@@ -36,12 +36,16 @@
 			
 			<!-- copy and paste input -->
 		    <label for="gradesInput">Paste grades here:</label>
+		    
+		    <!-- Information about how to upload grades -->
+			<a href="#" data-toggle="tooltip" data-placement="top"
+       		title="" data-original-title="Pasted grades must be separated by spaces, commas, or line by line"
+       		class="style-tooltip">Help pasting grades</a>
+
 		    <textarea class="form-control" id="gradesInput" rows="3" required></textarea>
 		</div>
 		<input type="submit" value="submit" class="btn btn-primary">
 	</form>
-
-
 
 </div>
 	

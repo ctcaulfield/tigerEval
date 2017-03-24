@@ -1,5 +1,9 @@
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip({html:true}); 
+});
+
+
 //checks if the grades match the correct input format
-//
 function validateForm(){
 	//validate if grades were properly pasted.
 	var gradeValues = $('textarea#gradesInput').val();
@@ -44,4 +48,7 @@ function correctValues(gradeValues){
 	}
 
 }
+
+
+
 

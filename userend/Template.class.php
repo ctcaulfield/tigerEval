@@ -11,7 +11,7 @@ class MyUtils{
 	// from template.class.php
 	
 	// $script - name of javascript file used in this code
-	static function html_header($title="", $location = "", $script = ""){
+	static function html_header($title="", $location = "", $srcName = ""){
 		$string = <<<END
 		<!DOCTYPE html>
 		<html lang="en">
@@ -19,10 +19,17 @@ class MyUtils{
 			<meta charset="utf-8" />
 			<title>TigerEval - {$title}</title>
 
-			<!-- Bootstrap -->
+			<!-- JQuery, JQueryUI, and Boostrap-->
+			<script src="{$location}assets/jquery/jquery-3.1.1.min.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script src="{$location}assets/bootstrap/js/bootstrap.min.js"></script>	
 		    <link href="{$location}assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-			<script src="{$location}assets/js/{$script}"></script>
+			<!-- end JQuery and Boostrap-->
 
+			<!--local javascript & css-->
+			<script src="{$location}assets/js/{$srcName}.js"></script>
+			<link href="{$location}assets/css/{$srcName}.css" rel="stylesheet">
+			<!-- end Javascript-->
 
 		</head>
 		<body>
@@ -50,8 +57,8 @@ class MyUtils{
 		          <li class="dropdown">
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Teaching <span class="caret"></span></a>
 		            <ul class="dropdown-menu">
-		              <li><a href="#">Current Courses</a></li>
-		              <li><a href="#">Enter Grades</a></li>
+		              <li><a href="{$location}/professor/professor_courses.php">Current Courses</a></li>
+		              <li><a href="{$location}/professor/submit_grades.php">Enter Grades</a></li>
 		            </ul>
 		          </li>
 		          <li class="dropdown">
@@ -93,11 +100,7 @@ END;
 	//closure of <body> and <html> tags
 	static function html_footer($location=""){
 		$string = <<<END
-		<!-- JQuery, JQueryUI, and Boostrap-->
-		<script src="{$location}assets/jquery/jquery-3.1.1.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="{$location}assets/bootstrap/js/bootstrap.min.js"></script>
-		<!-- end JQuery and Boostrap-->
+
 		</body>
 		</html>\n
 END;

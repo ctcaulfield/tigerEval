@@ -1,22 +1,9 @@
 <?php
-	include('LIB_tigerEval.php');
+	include('../LIB_tigerEval.php');
 	my_Init();
-
-	
-	echo MyUtils::html_header();
+	echo MyUtils::html_header("Professor", "../", "submit_grades");
 	
 	//html content
-	
-	//sidebar
-	echo '<div class="col-sm-3 col-md-2 sidebar" style="background-color: #f5f5f5;padding-top:15px;padding-bottom:15px;margin-top:-20px;height:100%;position:fixed;">
-          <ul class="nav nav-sidebar">
-            <li><strong>My Teaching</strong></li>
-            <li class="active"><a href="#">Courses</a><span class="sr-only">(current)</span></li>
-            <li><a href="#">Enter Grades</a></li>
-            <li style="padding-top:10px;"><strong>Coordinating</strong></li>
-			<li><a href="#">Course Results</a></li>
-          </ul>
-        </div>';
 	
 	//table
 	echo '<div class="col-md-8" style="margin-left: 25%;">
