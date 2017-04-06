@@ -43,6 +43,7 @@ create table COURSE(
 	Course_Submitted int,
 	Course_Confirmed int,
 	Program_ID int,
+        term char(4),
 	FOREIGN KEY (Program_ID) REFERENCES PROGRAM(Program_ID)
 );
 

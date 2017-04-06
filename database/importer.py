@@ -5,14 +5,19 @@ import pymysql
 term = '2165' # this will change or have to get past terms
 termList = []
 
+#What I need - list of every professor in every college using the course numbers
+collegeList = ['GCCIS','KGCOE']
+
+for x in range(999):
+	print x
+
 counter = 0
 
-connection = pymysql.connect(host='localhost',
+"""connection = pymysql.connect(host='localhost',
 				user='root',
 				password='student',
 				db='catTest',
 				cursorclass=pymysql.cursors.DictCursor)
-
 def getProfessors(url):
 	profList = []
 	r = requests.get(url)
@@ -44,4 +49,6 @@ for prof in profList:
 print "Inserted " + counter + " records into the database."
 connection.close()	
 #There are 290 courses being taught by 33 professors among the IST department
+"""
+
 
