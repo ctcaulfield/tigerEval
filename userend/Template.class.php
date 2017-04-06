@@ -19,9 +19,10 @@ class MyUtils{
 			<meta charset="utf-8" />
 			<title>TigerEval - {$title}</title>
 
-			<!-- JQuery, JQueryUI, and Boostrap-->
+			<!-- JQuery, JQueryUI, Datatables, and Boostrap-->
 			<script src="{$location}assets/jquery/jquery-3.1.1.min.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 			<script src="{$location}assets/bootstrap/js/bootstrap.min.js"></script>	
 		    <link href="{$location}assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 			<!-- end JQuery and Boostrap-->
@@ -30,6 +31,10 @@ class MyUtils{
 			<script src="{$location}assets/js/{$srcName}.js"></script>
 			<link href="{$location}assets/css/{$srcName}.css" rel="stylesheet">
 			<!-- end Javascript-->
+			
+			<!--Datatables css-->
+			<link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet">
+			<!-- end Datatables css-->
 
 		</head>
 		<body>
