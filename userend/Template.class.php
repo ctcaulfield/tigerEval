@@ -70,11 +70,11 @@ class MyUtils{
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordinating<span class="caret"></span></a>
 		            <ul class="dropdown-menu">
 		              <!-- Course Coordinators will see course results -->
-		              <li><a href="#">Course Coordinator</a></li>
-		              <!-- Degree Coordinators will see course results -->
-		              <li><a href="#">Program Coordinator</a></li>
+		              <li><a href="{$location}/course_coord/course_reports.php">Course Coordinator</a></li>
 		              <!-- Program Coordinators will see course results -->
-		              <li><a href="#">Assessment Coordinator</a></li>
+		              <li><a href="{$location}/program_coord/program_reports.php">Program Coordinator</a></li>
+		              <!-- Assessment Coordinators will see course results -->
+		              <li><a href="{$location}/assessment_coord/assessment_reports.php">Assessment Coordinator</a></li>
 		            </ul>
 		          </li>
 		        </ul>
