@@ -70,16 +70,16 @@ class MyUtils{
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordinating<span class="caret"></span></a>
 		            <ul class="dropdown-menu">
 		              <!-- Course Coordinators will see course results -->
-		              <li><a href="#">Course Results</a></li>
-		              <!-- Degree Coordinators will see course results -->
-		              <li><a href="#">Degree Results</a></li>
+		              <li><a href="{$location}/course_coord/course_reports.php">Course Coordinator</a></li>
 		              <!-- Program Coordinators will see course results -->
-		              <li><a href="#">Program Results</a></li>
+		              <li><a href="{$location}/program_coord/program_reports.php">Program Coordinator</a></li>
+		              <!-- Assessment Coordinators will see course results -->
+		              <li><a href="{$location}/assessment_coord/assessment_reports.php">Assessment Coordinator</a></li>
 		            </ul>
 		          </li>
 		        </ul>
 		        <ul class="nav navbar-nav navbar-right">
-		          <li><a href="#">Foo</a></li>
+		          <li><a href="#">Ignore me</a></li>
 		          <li class="dropdown">
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Christopher Caulfield<span class="caret"></span></a>
 		            <ul class="dropdown-menu">
