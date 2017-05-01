@@ -9,6 +9,7 @@ public class Course {
 	private String name;
 	private String description;
 	private String benchmark;
+	private String term;
 	private String startDate;
 	private String endDate;
 	private String deadline;
@@ -21,11 +22,12 @@ public class Course {
 	
 	public Course(){}
 	
-	public Course(String name, String description, String benchmark, String startDate, String endDate,
+	public Course(String name, String description, String benchmark, String term, String startDate, String endDate,
 			String deadline, int submitted, int confirmed, int coordinatorId, int professorId) {
 		this.name = name;
 		this.description = description;
 		this.benchmark = benchmark;
+		this.setTerm(term);
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.deadline = deadline;
@@ -122,5 +124,13 @@ public class Course {
 
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
+	}
+
+	public String getTerm() {
+		return term;
+	}
+
+	public void setTerm(String term) {
+		this.term = term;
 	}
 }

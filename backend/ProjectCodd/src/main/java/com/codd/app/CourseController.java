@@ -51,5 +51,15 @@ public class CourseController {
 			return new ResponseEntity<>("Course not in correct format", HttpStatus.BAD_REQUEST);
 		}
 	}
+	
+	@RequestMapping(value="/setOutcome/{id}", method=RequestMethod.PUT, consumes= MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<?> setOutcome(@PathVariable("id") int id) throws JsonParseException, JsonMappingException, IOException{
+		if(id > 0){
+			courseService.setOutcome(id);
+			return new ResponseEntity<>("Outcome set", HttpStatus.OK);
+		}else{
+			return new ResponseEntity<>("Could not set outcome", HttpStatus.BAD_REQUEST);
+		}
+	}
 
 }
