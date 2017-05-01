@@ -1,5 +1,7 @@
 package com.codd.service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -34,7 +36,7 @@ public class CourseService {
 	private ProfessorDAOImpl professorDAO;
 	
 	public List<Course> getCourseByProfessor(int id){
-		String sql = "SELECT name, benchmark, submitted FROM course ";
+		String sql = "SELECT name, benchmark, submitted FROM course WHERE professor_id=" + id;
 	    List<Course> listCourse = jdbcTemplate.query(sql, new RowMapper<Course>() {
 	 
 	        @Override
@@ -78,6 +80,16 @@ public class CourseService {
 		
 	}
 	
+	public void setOutcome(int id){
+		String sql = "SELECT AVG(avg_grade) FROM section_instrument JOIN section USING(section_id)"
+				+ " JOIN course USING(course_id) WHERE course_id=?";
+		double value = jdbcTemplate.queryForObject(sql, new Object[] {id}, Double.class);
+		BigDecimal bd = new BigDecimal(value);
+		bd = bd.setScale(2, RoundingMode.HALF_UP);
+		String sql2 = "UPDATE course SET outcome =? WHERE course_id=?";
+		jdbcTemplate.update(sql2, bd, id);
+	}
+	
 	public void setCourse(int id, Course course){
 		int courseId = courseDAO.saveOrUpdate(course);
 		
@@ -93,28 +105,29 @@ public class CourseService {
 	        @Override
 	        public Course mapRow(ResultSet rs, int rowNum) throws SQLException {
 	        	Course course = new Course();
-	 
+	        	course.setCourseId(rs.getInt("course_id"));
 	        	course.setName(rs.getString("name"));
 	        	course.setSubmitted(rs.getInt("submitted"));
 	        	course.setBenchmark(rs.getString("benchmark"));
 	        	
-	        	String sql2 = "SELECT * FROM section WHERE course_id =" + rs.getInt("course_id");
+	        	String sql2 = "SELECT * FROM section WHERE course_id =" + course.getCourseId();
 	        	
 	        	List<Map<String, Object>> sectionsMap = jdbcTemplate.queryForList(sql2);
 	        	List<Section> sections = new ArrayList<Section>();
 	        	for(Map<String,Object> m: sectionsMap){
 	  
 	        		Section section = new Section();
+	        		section.setSectionId((int) m.get("section_id"));
 	        		section.setNumber((int) m.get("number"));
 	        		String sql3 = "SELECT name, avg_grade FROM  section JOIN section_instrument USING(section_id)"
-	        				+ " JOIN instrument USING(instrument_id) WHERE section_id=" + m.get("section_id");
+	        				+ " JOIN instrument USING(instrument_id) WHERE section_id=" + section.getSectionId();
 	        		List<Instrument> instrumentList = new ArrayList<Instrument>();
 	        		List<Map<String,Object>> instrumentsMap = jdbcTemplate.queryForList(sql3);
 	        		for(Map<String,Object> instr: instrumentsMap){
 	        			Instrument instrument = new Instrument();
+	        			instrument.setInstrument_id((int) instr.get("instrument_id"));
 	        			instrument.setName((String) instr.get("name"));
 	        			instrument.setAvgGrade((double) instr.get("avg_grade"));
-	        			
 	        			instrumentList.add(instrument);
 	        		}
 	        		section.setInstruments(instrumentList);

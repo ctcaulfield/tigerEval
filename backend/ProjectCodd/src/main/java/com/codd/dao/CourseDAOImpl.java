@@ -40,16 +40,16 @@ public class CourseDAOImpl implements CourseDAO {
 		if (course.getCourseId() > 0) {
 	        // update
 	        String sql = "UPDATE course SET name=?, description=?,  "
-	                    + "benchmark=?, start_date=?,end_date=?,deadline=?,submitted=?,"
+	                    + "benchmark=?, term=?,start_date=?,end_date=?,deadline=?,submitted=?,"
 	                    + "confirmed=?, coordinator_id=?, professor_id=? WHERE course_id=?";
 	        jdbcTemplate.update(sql, course.getName(), course.getDescription(),
-	                course.getBenchmark(), startDate,
+	                course.getBenchmark(), course.getTerm(), startDate,
 	                endDate, deadline, course.getSubmitted(), course.getConfirmed(),
 	                course.getCoordinatorId(), course.getProfessorId(), course.getCourseId());
 	        return course.getCourseId();
 		}else{
 			String sql = "INSERT INTO course (name, description, benchmark, start_date,end_date,"
-					+ "deadline,submitted, confirmed, coordinator_id, professor_id) VALUES (?,?,?,?,?,?,?,?,?,?)";
+					+ "deadline,submitted, confirmed, coordinator_id, professor_id, term) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 			KeyHolder holder = new GeneratedKeyHolder();
 
 			jdbcTemplate.update(new PreparedStatementCreator() {           
@@ -68,6 +68,7 @@ public class CourseDAOImpl implements CourseDAO {
 			                    ps.setInt(8, course.getConfirmed());
 			                    ps.setInt(9, course.getCoordinatorId());
 			                    ps.setInt(10, course.getProfessorId());
+			                    ps.setString(10, course.getTerm());
 			                    
 			                    return ps;
 			                }

@@ -50,6 +50,7 @@ public class ProgramService {
 		        		Course course = new Course();
 		        		course.setName((String) m.get("name"));
 		        		course.setBenchmark((String) m.get("benchmark"));
+		        		course.setTerm((String) m.get("term"));
 		        		course.setProfessor(professorDAO.get((int)m.get("professor_id")));
 		        		course.setSubmitted((int) m.get("submitted"));
 		        		
