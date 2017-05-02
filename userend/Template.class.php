@@ -2,18 +2,43 @@
 
 class MyUtils{
 	// contains all content from beginning of HTML to end of navbar
-	static function html_header($title="Untitled"){
+	//parameters
+	
+	// $title - provide a title to the html file
+	
+	// $location - the location of the child thats calling this parent
+	//	function - ex: "../" -> for call from a file one folder down
+	// from template.class.php
+	
+	// $script - name of javascript file used in this code
+	static function html_header($title="", $location = "", $srcName = ""){
 		$string = <<<END
 		<!DOCTYPE html>
 		<html lang="en">
 		<head>
 			<meta charset="utf-8" />
-			<title>TigerEval</title>
+			<title>TigerEval - {$title}</title>
 
-			<!-- Bootstrap -->
-		    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+			<!-- JQuery, JQueryUI, Datatables, and Boostrap-->
+			<script src="{$location}assets/jquery/jquery-3.1.1.min.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+			<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+			<script src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+			<script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+			<script src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap.min.js"></script>
+			<script src="{$location}assets/bootstrap/js/bootstrap.min.js"></script>	
+		    <link href="{$location}assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+			<!-- end JQuery and Boostrap-->
+
+			<!--local javascript & css-->
+			<script src="{$location}assets/js/{$srcName}.js"></script>
+			<link href="{$location}assets/css/{$srcName}.css" rel="stylesheet">
+			<!-- end Javascript-->
 			
-
+			<!--Datatables css-->
+			<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
+			<!-- end Datatables css-->
 
 		</head>
 		<body>
@@ -41,24 +66,24 @@ class MyUtils{
 		          <li class="dropdown">
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Teaching <span class="caret"></span></a>
 		            <ul class="dropdown-menu">
-		              <li><a href="#">Current Courses</a></li>
-		              <li><a href="#">Enter Grades</a></li>
+		              <li><a href="{$location}/professor/professor_courses.php">Current Courses</a></li>
+		              <li><a href="{$location}/professor/submit_grades.php">Enter Grades</a></li>
 		            </ul>
 		          </li>
 		          <li class="dropdown">
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordinating<span class="caret"></span></a>
 		            <ul class="dropdown-menu">
 		              <!-- Course Coordinators will see course results -->
-		              <li><a href="#">Course Results</a></li>
-		              <!-- Degree Coordinators will see course results -->
-		              <li><a href="#">Degree Results</a></li>
+		              <li><a href="{$location}/course_coord/course_reports.php">Course Coordinator</a></li>
 		              <!-- Program Coordinators will see course results -->
-		              <li><a href="#">Program Results</a></li>
+		              <li><a href="{$location}/program_coord/program_reports.php">Program Coordinator</a></li>
+		              <!-- Assessment Coordinators will see course results -->
+		              <li><a href="{$location}/assessment_coord/assessment_reports.php">Assessment Coordinator</a></li>
 		            </ul>
 		          </li>
 		        </ul>
 		        <ul class="nav navbar-nav navbar-right">
-		          <li><a href="#">Foo</a></li>
+		          <li><a href="#">Ignore me</a></li>
 		          <li class="dropdown">
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Christopher Caulfield<span class="caret"></span></a>
 		            <ul class="dropdown-menu">
@@ -82,13 +107,9 @@ END;
 	// contains all content after the main content.
 	//jquery, bootstrap, and other js files
 	//closure of <body> and <html> tags
-	static function html_footer($text=""){
+	static function html_footer($location=""){
 		$string = <<<END
-		<!-- JQuery, JQueryUI, and Boostrap-->
-		<script src="assets/jquery/jquery-3.1.1.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-		<!-- end JQuery and Boostrap-->
+
 		</body>
 		</html>\n
 END;
