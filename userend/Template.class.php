@@ -88,8 +88,6 @@ class MyUtils{
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Christopher Caulfield<span class="caret"></span></a>
 		            <ul class="dropdown-menu">
 		              <li><a href="#">Log out</a></li>
-		              <li role="separator" class="divider"></li>
-		              <li><a href="#">Settings</a></li>
 		            </ul>
 		          </li>
 		        </ul>

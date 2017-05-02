@@ -4,6 +4,9 @@
 	echo MyUtils::html_header("Course Coordinator - Reports", "../", "course_reports");
 ?>
   		<div class = "data_table_container">
+  			<div class="page-header">
+			 	<h1>Course Coordinator <small>Current Courses</small></h1>
+			</div>
 		  	<div class="">
             	<div class="panel with-nav-tabs panel-info">
                 	<div class="panel-heading">
@@ -20,6 +23,8 @@
                         </ul>
                 	</div>
                 <div class="panel-body">
+        
+
                     <div class="tab-content">
                         
 						<!-- tab 1 -->
