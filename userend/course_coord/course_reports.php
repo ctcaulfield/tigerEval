@@ -3,46 +3,14 @@
 	my_Init();
 	echo MyUtils::html_header("Course Coordinator - Reports", "../", "course_reports");
 ?>
-	
-<!-- <div class="col-md-8" style="margin-left: 25%;">
-	<h2 class="text-center">Current Courses</h2>
-	<div class="accordion">
-		<h3 id="class1name" class="text-center" style="cursor:pointer;">ISTE - 120 - (1/2)<span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span></h3>
-		<div id="class1">
-			<table class="coordCourses">
-			  <thead>
-				<tr><th>Course</th><th>Section</th><th>Term</th><th>Grading Instrument</th><th>Grades Submitted</th></tr>
-			  </thead>
-			  <tbody>
-				<tr><td>ISTE - 120</td><td>01</td><td>2161</td><td>Practical 3</td><td>Submitted</td></tr>
-				<tr><td>ISTE - 120</td><td>02</td><td>2161</td><td>Practical 3</td><td><a href="#">Notify Teacher</a></td></tr>
-			  </tbody>
-			</table>
-		</div>
-		<h3 style="margin-top:100px;" id="class2name" class="text-center" style="cursor:pointer;">ISTE - 121 - (4/4)<span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span></h3>
-		<div id="class2">
-			<table class="coordCourses">
-			  <thead>
-				<tr><th>Course</th><th>Section</th><th>Term</th><th>Grading Instrument</th><th>Grades Submitted</th></tr>
-			  </thead>
-			  <tbody>
-				<tr><td>ISTE - 121</td><td>01</td><td>2161</td><td>Practical 2</td><td>Submitted</td></tr>
-				<tr><td>ISTE - 121</td><td>02</td><td>2161</td><td>Practical 2</td><td>Submitted</td></tr>
-				<tr><td>ISTE - 121</td><td>03</td><td>2161</td><td>Practical 2</td><td>Submitted</td></tr>
-				<tr><td>ISTE - 121</td><td>04</td><td>2161</td><td>Practical 2</td><td>Submitted</td></tr>
-			  </tbody>
-			</table>
-		</div>
-	</div>
-  </div> -->
-
-		  <div class="col-md-6">
-            <div class="panel with-nav-tabs panel-info">
-                <div class="panel-heading">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1" data-toggle="tab">ISTE 120</a></li>
-                            <li><a href="#tab2" data-toggle="tab">ISTE 121</a></li>
-                            <li><a href="#tab3" data-toggle="tab">ISTE 260</a></li>
+  		<div class = "data_table_container">
+		  	<div class="">
+            	<div class="panel with-nav-tabs panel-info">
+                	<div class="panel-heading">
+                   	     <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab">ISTE 120 - 1/2</a></li>
+                            <li><a href="#tab2" data-toggle="tab">ISTE 121 - 2/2</a></li>
+                            <li><a href="#tab3" data-toggle="tab">ISTE 260 - 1/2</a></li>
                             <li class="dropdown">
                                 <a href="#" data-toggle="dropdown">Additional Courses<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -50,7 +18,7 @@
                                 </ul>
                             </li>
                         </ul>
-                </div>
+                	</div>
                 <div class="panel-body">
                     <div class="tab-content">
                         
@@ -82,7 +50,7 @@
 						                <td>Jeffrey Jockel</td>
 						                <td>2161</td>
 						                <td>Practical 1</td>
-						                <td>Submitted</td>
+						                <td>Notify Teacher</td>
 						            </tr>
 						        </tbody>
 						    </table>
@@ -151,7 +119,7 @@
 						                <td>Jeffrey Jockel</td>
 						                <td>2161</td>
 						                <td>Practical 1</td>
-						                <td>Submitted</td>
+						                <td>Notify Teacher</td>
 						            </tr>
 						        </tbody>
 						    </table>
@@ -175,6 +143,7 @@
                 </div>
             </div>
         </div>
+    </div>
 		  
 <?php	
 	echo MyUtils::html_footer();
