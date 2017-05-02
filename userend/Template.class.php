@@ -22,7 +22,11 @@ class MyUtils{
 			<!-- JQuery, JQueryUI, Datatables, and Boostrap-->
 			<script src="{$location}assets/jquery/jquery-3.1.1.min.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-			<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+			<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+			<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+			<script src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+			<script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+			<script src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap.min.js"></script>
 			<script src="{$location}assets/bootstrap/js/bootstrap.min.js"></script>	
 		    <link href="{$location}assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 			<!-- end JQuery and Boostrap-->
@@ -33,7 +37,7 @@ class MyUtils{
 			<!-- end Javascript-->
 			
 			<!--Datatables css-->
-			<link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet">
+			<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
 			<!-- end Datatables css-->
 
 		</head>

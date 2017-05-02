@@ -1,7 +1,7 @@
 <?php
 	include('../LIB_tigerEval.php');
 	my_Init();
-	echo MyUtils::html_header("Professor", "../", "submit_grades");
+	echo MyUtils::html_header("Professor - Submit Grades ", "../", "submit_grades");
 ?>
 	
 
