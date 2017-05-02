@@ -8,9 +8,9 @@
             	<div class="panel with-nav-tabs panel-info">
                 	<div class="panel-heading">
                    	     <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1" data-toggle="tab">ISTE 120 - 1/2</a></li>
-                            <li><a href="#tab2" data-toggle="tab">ISTE 121 - 2/2</a></li>
-                            <li><a href="#tab3" data-toggle="tab">ISTE 260 - 1/2</a></li>
+                            <li class="active"><a href="#tab1" data-toggle="tab">ISTE 120 - (1/2)</a></li>
+                            <li><a href="#tab2" data-toggle="tab">ISTE 121 - (2/2)</a></li>
+                            <li><a href="#tab3" data-toggle="tab">ISTE 260 - (1/2)</a></li>
                             <li class="dropdown">
                                 <a href="#" data-toggle="dropdown">Additional Courses<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
