@@ -20,16 +20,27 @@ class MyUtils{
 			<title>TigerEval - {$title}</title>
 
 			<!-- JQuery, JQueryUI, Datatables, and Boostrap-->
+
 			<script src="{$location}assets/jquery/jquery-3.1.1.min.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 			<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+			<script src="https://cdn.datatables.net/select/1.2.2/js/dataTables.select.min.js"></script>
 			<script src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
 			<script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
 			<script src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap.min.js"></script>
 			<script src="{$location}assets/bootstrap/js/bootstrap.min.js"></script>	
 		    <link href="{$location}assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 			<!-- end JQuery and Boostrap-->
+
+			<!-- exporting all data from datatables -->
+			<script src='https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js'></script>
+			<script src='//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
+			<script src='//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+			<script src='//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+			<script src='//cdn.datatables.net/buttons/1.2.1/js/buttons.html5.min.js'></script>
+			<!-- end of exporting-->
+
 
 			<!--local javascript & css-->
 			<script src="{$location}assets/js/{$srcName}.js"></script>
@@ -38,6 +49,8 @@ class MyUtils{
 			
 			<!--Datatables css-->
 			<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
+			<link href="https://cdn.datatables.net/select/1.2.2/css/select.bootstrap.min.css" rel="stylesheet">
+
 			<!-- end Datatables css-->
 
 		</head>

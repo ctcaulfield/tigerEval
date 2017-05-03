@@ -10,7 +10,6 @@
 	 	<h1>Assessment Coordinator<small>All Program(s)</small></h1>
 	</div>
 
-  	<div class="">
     	<div class="panel with-nav-tabs panel-info">
         	<div class="panel-heading">
            	     <ul class="nav nav-tabs">
@@ -73,8 +72,9 @@
             </div>
         </div>
     </div>
+    <!-- Directs to where grades are exported to taskstream -->
+    <a class="btn btn-success" href="export.php">Export Data</a>
 </div>
-
 	  
 <?php
 	echo MyUtils::html_footer();
