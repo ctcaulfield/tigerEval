@@ -6,14 +6,21 @@ $(document).ready(function() {
                     dom: 'Bfrtip',
                     buttons: [{
                             extend: 'excelHtml5',
-                            text: 'Export Selected',
+                            text: '<button type="button" style="margin: 10px" class="btn btn-info">Export All</button>',
+                            exportOptions: {
+                                columns: ':visible:not(.not-exported)'
+                            },
+                            title: 'Data export'
+                        }, {
+                            extend: 'excelHtml5',
+                            text: '<button type="button" class="btn btn-success">Export Selected</button>',
                             exportOptions: {
                                 columns: ':visible:not(.not-exported)',
                                 modifier: {
                                     selected: true
                                 }
                             },
-                            title: 'data_export'
+                            title: 'Data export'
                         }
                     ],
                     select: {
