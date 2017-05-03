@@ -1,5 +1,7 @@
 package com.codd.app;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +23,11 @@ public class ProfessorController {
 	@RequestMapping(value="/getProfessor/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Professor> getProfessor(@PathVariable("id") int id){
 		return new ResponseEntity<Professor>(professorService.getProfessor(id), HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/getAllProfessors", method=RequestMethod.GET)
+	public ResponseEntity<List<Professor>> getAllProfessors(){
+		return new ResponseEntity<List<Professor>>(professorService.getAllProfessors(), HttpStatus.OK);
 	}
 
 }

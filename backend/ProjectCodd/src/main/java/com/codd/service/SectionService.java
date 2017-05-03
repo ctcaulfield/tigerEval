@@ -16,11 +16,19 @@ public class SectionService {
 	@Autowired 
 	private SectionDAOImpl sectionDAO;
 	
+	
+	/*
+	 * Method used for setting the average grade to the instrument of the section
+	 * using sectionID and instrumentID.
+	 * */
 	public void setAvgGrade(int sectionId, int instrumentId, double grade){
 		String sql = "UPDATE section_instrument SET avg_grade = ? WHERE section_id=? AND instrument_id=?";
 		jdbcTemplate.update(sql, grade, sectionId, instrumentId);
 	}
 	
+	/*
+	 * Method used to add section.
+	 * */
 	public void setSection(Section section){
 		sectionDAO.saveOrUpdate(section);
 	}

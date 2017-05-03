@@ -35,6 +35,10 @@ public class CourseService {
 	@Autowired
 	private ProfessorDAOImpl professorDAO;
 	
+	/*
+	 * Method used for retrieving the list of courses by the professor's id.
+	 * Each course contains list of sections, each section contains list of instruments.
+	 * */
 	public List<Course> getCourseByProfessor(int id){
 		String sql = "SELECT name, benchmark, submitted FROM course WHERE professor_id=" + id;
 	    List<Course> listCourse = jdbcTemplate.query(sql, new RowMapper<Course>() {
@@ -80,6 +84,10 @@ public class CourseService {
 		
 	}
 	
+	/*
+	 * Method used to set the outcome of the course.
+	 * Returns the average grade for the course based on the average grade of the sections.
+	 * */
 	public void setOutcome(int id){
 		String sql = "SELECT AVG(avg_grade) FROM section_instrument JOIN section USING(section_id)"
 				+ " JOIN course USING(course_id) WHERE course_id=?";
@@ -90,6 +98,9 @@ public class CourseService {
 		jdbcTemplate.update(sql2, bd, id);
 	}
 	
+	/*
+	 * Method used for inserting the course in the program using program id.
+	 * */
 	public void setCourse(int id, Course course){
 		int courseId = courseDAO.saveOrUpdate(course);
 		
@@ -98,6 +109,9 @@ public class CourseService {
 		jdbcTemplate.update(sql, id, courseId);
 	}
 	
+	/*
+	 * Method used for returning the courses belonging to a coordinator by coordinator id.
+	 * */
 	public List<Course> getCoordinatorCourses(int id){
 		String sql = "SELECT course_id, professor_id, name, benchmark, submitted FROM course WHERE coordinator_id="+id;
 	    List<Course> listCourse = jdbcTemplate.query(sql, new RowMapper<Course>() {

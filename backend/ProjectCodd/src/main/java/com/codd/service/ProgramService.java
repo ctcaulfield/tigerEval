@@ -30,6 +30,10 @@ public class ProgramService {
 	@Autowired
 	private ProfessorDAOImpl professorDAO;
 	
+	
+	/*
+	 * Method used for returning the programs belonging to a coordinator by coordinator id.
+	 * */
 	public List<Program> getByCoordinator(int id){
 		String sql = "SELECT program_id, program.name FROM program JOIN program_course USING(program_id)" +
 				" JOIN course USING(course_id) where program.coordinator_id =" + id;
