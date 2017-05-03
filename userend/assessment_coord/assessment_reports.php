@@ -1,7 +1,7 @@
 <?php
 	include('../LIB_tigerEval.php');
 	my_Init();
-	echo MyUtils::html_header("Assessment Coordinator", "../", "assessment_coord");
+	echo MyUtils::html_header("Assessment Coordinator", "../", "assessment_reports");
 ?>
 	
 <div class = "data_table_container">
@@ -14,7 +14,10 @@
     	<div class="panel with-nav-tabs panel-info">
         	<div class="panel-heading">
            	     <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab1" data-toggle="tab">Web and Mobile Computing</a></li>
+                    <li class="active"><a href="#tab1" data-toggle="tab">WMC BS</a></li>
+                    <li><a href="#" data-toggle="tab">HCI MS</a></li>
+                    <li><a href="#" data-toggle="tab">HCC MS</a></li>
+                    <li><a href="#" data-toggle="tab">IST BS</a></li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown">Additional Programs<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
