@@ -62,7 +62,7 @@
 						                <td>Michael Floeser</td>
 						                <td>2161</td>
 						                <td>Final Exam</td>
-						                <td>Notify Teacher</td>
+						                <td>Notify Professor</td>
 						            </tr>
 						        </tbody>
 						    </table>
@@ -94,7 +94,7 @@
 						                <td>Michael Floeser</td>
 						                <td>2161</td>
 						                <td>Practical 3</td>
-						                <td>Notify Teacher</td> <!-- This will be a url to submit grades -->
+						                <td>Notify Professor</td> <!-- This will be a url to submit grades -->
 						            </tr>
 						            <tr>
 						                <td>ISTE 121</td>
@@ -102,7 +102,7 @@
 						                <td>Jeffrey Jockel</td>
 						                <td>2161</td>
 						                <td>Practical 1</td>
-						                <td>Notify Teacher</td>
+						                <td>Notify Professor</td>
 						            </tr>
 						        </tbody>
 						    </table>

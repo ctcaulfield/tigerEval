@@ -50,7 +50,7 @@
 					    1/3 Complete
 					  </div>
 					</div>
-
+					<h3>Program Coordinator: Bryan French</h3>
             	    <table id="" class="display table table-striped table-bordered nowrap" cellspacing="0" width="100%">
 				        <thead>
 				            <tr>
