@@ -25,7 +25,12 @@
         	</div>
         <div class="panel-body">
             <div class="tab-content">
-                
+            	<div class="progress">
+				  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1"
+				  aria-valuemin="0" aria-valuemax="4" style="width:25%">
+				    1/4 Complete
+				  </div>
+				</div>
 				<!-- tab 1 -->
                 <div class="tab-pane in active" id="tab1">
             	    <table id="" class="display table table-striped table-bordered nowrap" cellspacing="0" width="100%">
@@ -54,15 +59,23 @@
 				                <td>2161</td>
 				                <td>Practical 3</td>
 				                <td>86% above avg</td>
-				                <td>Notify Teacher</td>
+				                <td>Notify Coordinator</td>
 				            </tr>
 				            <tr>
 				                <td>ISTE 140</td>
 				                <td>Deborah LaBelle</td>
 				                <td>2161</td>
 				                <td>Final Exam</td>
-				                <td>86% above avg</td>
-				                <td>Notify Teacher</td>
+				                <td>80% above avg</td>
+				                <td>Notify Coordinator</td>
+				            </tr>
+				            <tr>
+				                <td>ISTE 330</td>
+				                <td>Michael Floeser</td>
+				                <td>2161</td>
+				                <td>Final Exam</td>
+				                <td>80% above avg</td>
+				                <td>Notify Coordinator</td>
 				            </tr>
 				        </tbody>
 				    </table>

@@ -45,9 +45,9 @@
                 <div class="tab-pane in active" id="tab1">
 					
 					<div class="progress">
-					  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-					  aria-valuemin="0" aria-valuemax="100" style="width:40%">
-					    40% Complete (success)
+					  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40"
+					  aria-valuemin="0" aria-valuemax="3" style="width:33%">
+					    1/3 Complete
 					  </div>
 					</div>
 
@@ -77,7 +77,7 @@
 				                <td>2161</td>
 				                <td>Practical 3</td>
 				                <td>86% above avg</td>
-				                <td>Notify Teacher</td>
+				                <td>Notify Coordinator</td>
 				            </tr>
 				            <tr>
 				                <td>ISTE 140</td>
@@ -85,7 +85,7 @@
 				                <td>2161</td>
 				                <td>Final Exam</td>
 				                <td>86% above avg</td>
-				                <td>Notify Teacher</td>
+				                <td>Notify Coordinator</td>
 				            </tr>
 				        </tbody>
 				    </table>
