@@ -127,6 +127,12 @@ END;
 		return $string;
 	}
 
+	function getURL($route){
+	    
+	    $json = file_get_contents($route);
+            $obj = json_decode($json);
+            return $obj;
+	}
 } // end class
 
 

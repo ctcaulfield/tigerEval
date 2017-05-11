@@ -42,8 +42,8 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/mydb?useSSL=false" />
-		<property name="username" value="root" />
-		<property name="password" value="1234" />
+		<property name="username" value="mdr2130" />
+		<property name="password" value="dbpass" />
 	</bean> 
 	
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">

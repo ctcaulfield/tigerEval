@@ -19,22 +19,20 @@
                             <th>Grading Instrument</th>
                             <th>Grades Reported</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ISTE 120</td>
-                            <td>01</td>
-                            <td>2161</td>
-                            <td>Practical 3</td>
-                            <td>Submit Now</td> <!-- This will be a url to submit grades -->
-                        </tr>
-                        <tr>
-                            <td>ISTE 121</td>
-                            <td>02</td>
-                            <td>2161</td>
-                            <td>Practical 1</td>
-                            <td>Submitted</td>
-                        </tr>
+                    </thead> 
+		    <tbody>
+			<?php 
+		        $data = MyUtils::getURL("http://team-codd.ist.rit.edu:8080/ProjectCodd/course/getByProfessor/1");
+       				foreach($data as $infos){
+					echo "<tr>";
+					echo "<td>".$infos->name."</td>";
+                        		echo "<td>".$infos->sections[0]->number."</td>";
+					echo "<td>2165</td>";
+					echo "<td>".$infos->sections[0]->instruments[0]->name."</td>";
+					echo "<td>".$infos->sections[0]->submitted."</td>";
+					echo "</tr>";
+				}
+			?>
                     </tbody>
                 </table>
             </div>
@@ -45,4 +43,17 @@
 		  
 <?php	
 	echo MyUtils::html_footer();
+	/*
+	$data = MyUtils::getURL("http://team-codd.ist.rit.edu:8080/ProjectCodd/course/getByProfessor/1");
+	foreach($data as $infos){
+		echo $infos->name;
+		foreach($infos->sections as $section){
+			echo $section->number;		       
+			foreach($section->instruments as $ins){
+				echo $ins->name;
+				echo $ins->avgGrade;
+			} 
+		}
+		echo $infos->term;
+	}*/	
 ?>
