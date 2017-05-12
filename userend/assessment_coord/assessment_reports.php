@@ -28,7 +28,7 @@
            	     <ul class="nav nav-tabs">
                     <li class="active"><a href="#tab1" data-toggle="tab">WMC BS</a></li>
                     <li><a href="#" data-toggle="tab">HCI MS</a></li>
-                    <li><a href="#" data-toggle="tab">HCC MS</a></li>
+                    <li><a href="#" data-toggle="tab">HCC BS</a></li>
                     <li><a href="#" data-toggle="tab">IST BS</a></li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown">Additional Programs<span class="caret"></span></a>
